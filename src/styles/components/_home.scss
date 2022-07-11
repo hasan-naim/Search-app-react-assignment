@@ -2,10 +2,7 @@
   width: 100%;
   min-height: 100vh;
   overflow: hidden;
-  background-image: url(../../assets/images/home.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+
   z-index: -1;
   padding-bottom: 20px;
 
@@ -17,4 +14,10 @@
     bottom: 0;
     background: rgba(105, 105, 105, 0.13);
   }
+}
+.home.img {
+  background-image: url(../../assets/images/home.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }

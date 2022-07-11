@@ -46,6 +46,12 @@
       word-break: break-word;
     }
   }
+  span {
+    display: block;
+    margin: 5px 0;
+    font-size: 14px;
+    font-weight: 400;
+  }
 }
 
 @media (min-width: 500px) {

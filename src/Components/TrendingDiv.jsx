@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import TrendingCard from './TrendingCard';
 
 function TrendingDiv() {
     const [trendingData, setTrendingData] = useState(null);
@@ -20,16 +21,16 @@ function TrendingDiv() {
                 <h2>Latest Movies</h2>
                 <div className="gallery">
                     {trendingData?.map((data) => (
-                        <div className="gallery-width" key={data.id}>
-                            <div className="gallery-card">
-                                <img
-                                    src={`https://image.tmdb.org/t/p/w500/${data.poster_path}`}
-                                    alt=""
-                                />
-                                <span className="title"> {data.title}</span>
-                            </div>
-                        </div>
+                        <TrendingCard data={data} />
                     ))}
+                </div>
+                <div className="suggestions">
+                    <h2>Populer Suggestions</h2>
+                    <span>Ms. Marvel</span>
+                    <span>Cara e Coragem</span>
+                    <span>Pantanal</span>
+                    <span>Além da Ilusão</span>
+                    <span>Love in 40 Days</span>
                 </div>
             </div>
         </div>
