@@ -1,8 +1,13 @@
 import React from 'react';
-import SearchInput from './SearchInput';
+import Home from './Home';
 
 function Layout() {
-    return <SearchInput />;
+    return (
+        <>
+            <Home />
+            {/* <Main /> */}
+        </>
+    );
 }
 
 export default Layout;
