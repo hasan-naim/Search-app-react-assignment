@@ -12,7 +12,7 @@ function Home() {
     const [showTrendingDiv, setShowTrendingDiv] = useState(false);
 
     // fetching data with api
-    const apiUrl = `https://api.themoviedb.org/3/search/movie?api_key=8192cc786ef61b56059ee40953b95ac1&language=en-US&query=${text}&page=1&include_adult=false`;
+    const apiUrl = `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&query=${text}&page=1&include_adult=false`;
     const { searchData } = useFetch(apiUrl, text);
 
     const clearInput = () => {
