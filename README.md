@@ -5,3 +5,8 @@ This is a movie search app. You can see trending movies and search any movie nam
 
 <h3> What I used to build this Web App</h3>
 I used <b>react</b> for this web app. And I also used [themoviedb.org](https://www.themoviedb.org/) <b>API</b>.
+<br>
+I also used:<br>
+~ material icon<br>
+~ custom hooks<br>
+~ scss for styling<br>

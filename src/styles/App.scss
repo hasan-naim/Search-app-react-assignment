@@ -14,7 +14,11 @@ body {
   width: 100%;
   padding: 0 1.5rem;
 }
-
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 // Import the components
 @import url(components/_home.scss);
 @import url(components/_button.scss);
