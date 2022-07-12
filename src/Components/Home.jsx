@@ -1,6 +1,6 @@
-import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import React, { useEffect, useState } from 'react';
-import SearchImg from '../assets/icons/search.svg';
+import SearchBar from './SearchBar';
+import SearchResult from './SearchResult';
 import TrendingDiv from './TrendingDiv';
 
 function Home() {
@@ -34,42 +34,14 @@ function Home() {
     return (
         <section className={`home ${!text && `img`}`}>
             <div className="container">
-                <div className="div-input">
-                    <input
-                        type="text"
-                        placeholder="Search"
-                        onFocus={() => setShowTrendingDiv(true)}
-                        // onBlur={() => setShowTrendingDiv(false)}
-                        onChange={(e) => setText(e.target.value)}
-                        value={text}
-                    />
-                    {text !== '' ? (
-                        <CloseRoundedIcon className="closeIcon" onClick={clearInput} />
-                    ) : (
-                        <img src={SearchImg} alt="" />
-                    )}
-                </div>
+                <SearchBar
+                    setShowTrendingDiv={setShowTrendingDiv}
+                    setText={setText}
+                    text={text}
+                    clearInput={clearInput}
+                />
                 {showTrendingDiv && !text && <TrendingDiv />}
-                {text && (
-                    <div className="search-result">
-                        <h1>Search Result: {text}</h1>
-                        <div className="wrapper">
-                            {searchData?.map((data) => (
-                                <div className="wrapper-width" key={data.id}>
-                                    <div className="search-card">
-                                        <img
-                                            src={`https://image.tmdb.org/t/p/w500/${data.poster_path}`}
-                                            alt=""
-                                        />
-                                        <span className="title">
-                                            {data.title} ({data.release_date.slice(0, 4)})
-                                        </span>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                )}
+                {text && <SearchResult text={text} searchData={searchData} />}
             </div>
         </section>
     );
