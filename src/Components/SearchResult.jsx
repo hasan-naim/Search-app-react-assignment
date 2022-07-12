@@ -9,7 +9,7 @@ function SearchResult({ text, searchData }) {
                     <div className="wrapper-width" key={data.id}>
                         <div className="search-card">
                             <img
-                                src={`https://image.tmdb.org/t/p/w500/${data.poster_path}`}
+                                src={`https://image.tmdb.org/t/p/w300/${data.poster_path}`}
                                 alt=""
                             />
                             <span className="title">

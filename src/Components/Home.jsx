@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
+import useFetch from '../Hooks/useFetch';
 import SearchBar from './SearchBar';
 import SearchResult from './SearchResult';
 import TrendingDiv from './TrendingDiv';
@@ -10,22 +11,9 @@ function Home() {
     // state for check clicking in the input feild
     const [showTrendingDiv, setShowTrendingDiv] = useState(false);
 
-    const [searchData, setSearchData] = useState(null);
-
-    useEffect(() => {
-        if (text !== '') {
-            const fetchData = async () => {
-                const res = await fetch(
-                    `https://api.themoviedb.org/3/search/movie?api_key=8192cc786ef61b56059ee40953b95ac1&language=en-US&query=${text}&page=1&include_adult=false`
-                );
-                const data = await res.json();
-                setSearchData(
-                    data.results.filter((movie) => movie.poster_path !== null && movie.release_date)
-                );
-            };
-            fetchData();
-        }
-    }, [text]);
+    // fetching data with api
+    const apiUrl = `https://api.themoviedb.org/3/search/movie?api_key=8192cc786ef61b56059ee40953b95ac1&language=en-US&query=${text}&page=1&include_adult=false`;
+    const { searchData } = useFetch(apiUrl, text);
 
     const clearInput = () => {
         setText('');
