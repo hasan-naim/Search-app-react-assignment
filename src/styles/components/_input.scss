@@ -29,6 +29,13 @@
     width: 25px;
     height: 25px;
   }
+  .closeIcon {
+    font-size: 2rem;
+    margin-left: -58px;
+    color: rgb(114, 114, 114);
+    cursor: pointer;
+    font-weight: 100;
+  }
 }
 
 @media (min-width: 768px) {

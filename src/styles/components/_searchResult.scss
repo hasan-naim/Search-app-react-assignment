@@ -1,4 +1,4 @@
-.search-div {
+.search-result {
   h1 {
     font-weight: 400;
     font-size: 40px;
@@ -19,7 +19,7 @@
     flex-wrap: wrap;
     justify-content: center;
     // gap: 1rem;
-    align-items: center;
+    align-items: flex-start;
     row-gap: 2rem;
 
     &-width {
@@ -58,7 +58,7 @@
 }
 
 @media (min-width: 500px) {
-  .search-div {
+  .search-result {
     .wrapper-width {
       width: 50%;
       justify-content: center;
@@ -66,7 +66,7 @@
   }
 }
 @media (min-width: 690px) {
-  .search-div {
+  .search-result {
     .wrapper-width {
       width: 33.33%;
       justify-content: center;
@@ -74,7 +74,7 @@
   }
 }
 @media (min-width: 870px) {
-  .search-div {
+  .search-result {
     .wrapper-width {
       width: 25%;
       justify-content: center;
@@ -82,7 +82,7 @@
   }
 }
 @media (min-width: 1040px) {
-  .search-div {
+  .search-result {
     .wrapper-width {
       width: 20%;
       justify-content: center;

@@ -21,7 +21,7 @@ function TrendingDiv() {
                 <h2>Latest Movies</h2>
                 <div className="gallery">
                     {trendingData?.map((data) => (
-                        <TrendingCard data={data} />
+                        <TrendingCard data={data} id={data.id} />
                     ))}
                 </div>
                 <div className="suggestions">
